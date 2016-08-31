@@ -12,5 +12,34 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="Click on the bigger number and get points"
+        android:id="@+id/introText" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/leftButton"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:onClick="leftButtonClicked" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/rightButton"
+        android:layout_alignTop="@+id/leftButton"
+        android:layout_alignParentEnd="true"
+        android:onClick="rightButtonClicked" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Points"
+        android:id="@+id/pointsText"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="68dp" />
 </RelativeLayout>
