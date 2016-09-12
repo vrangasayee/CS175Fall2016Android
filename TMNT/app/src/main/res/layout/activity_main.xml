@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="edu.sjsu.fall2016.cs175.tmnt.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        android:id="@+id/textView" />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toggleDisplay"
+        android:text="@string/display_yn"
+        android:checked="true"
+        android:onClick="toggleButton" />
+
+   <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/leo"
+            android:text="@string/leo"
+            android:checked="true"
+            android:onClick="changePicture" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mikey"
+            android:text="@string/mikey"
+            android:onClick="changePicture"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/raph"
+            android:text="@string/raph"
+            android:onClick="changePicture"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/don"
+            android:text="@string/don"
+            android:onClick="changePicture"/>
+
+    </RadioGroup>
+     <Spinner
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:entries="@array/turtles"
+         android:prompt="@string/choose_turtle"
+         android:id="@+id/turtle_chooser"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/turtle_result"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton"
+        android:layout_marginTop="67dp"
+        android:src="@drawable/leo"
+        android:contentDescription="@string/TMNT" />
+
+</LinearLayout>

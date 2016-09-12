@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Teenage Mutant Ninja Turtles</string>
+    <string name="choose_turtle">Choose a turtle</string>
+    <string name="raph">Raph</string>
+    <string name="don">Don</string>
+    <string name="mikey">Mikey</string>
+    <string name="leo">Leo</string>
+    <string name="TMNT">TMNT</string>
+    <string name="display_yn">Display Y/N?</string>
+    <string-array name="turtles">
+        <item name="leo">Leo</item>
+        <item name="Raph">Raph</item>
+        <item name="Mikey">Mikey</item>
+        <item name="Don">Don</item>
+    </string-array>
+</resources>
