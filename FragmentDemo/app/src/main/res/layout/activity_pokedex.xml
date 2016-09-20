@@ -15,7 +15,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:id="@+id/pikachu"
                     android:scaleType="fitCenter"
                     android:tag="pikachu"
                     android:src="@drawable/pikachu"
@@ -25,7 +24,6 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:scaleType="fitCenter"
-                    android:id="@+id/jigglypuff"
                     android:tag="jigglypuff"
                     android:src="@drawable/jigglypuff"
                     android:onClick="showDetail"/>
@@ -37,8 +35,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:scaleType="fitCenter"
-                    android:id="@+id/scraggy"
-                    android:tag="infernape"
+                    android:tag="scraggy"
                     android:src="@drawable/scraggy"
                     android:onClick="showDetail"/>
                 <ImageButton
@@ -46,7 +43,6 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:scaleType="fitCenter"
-                    android:id="@+id/infernape"
                     android:tag="infernape"
                     android:src="@drawable/infernape"
                     android:onClick="showDetail"/>
@@ -58,8 +54,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:scaleType="fitCenter"
-                    android:id="@+id/squirtle"
-                    android:tag="infernape"
+                    android:tag="squirtle"
                     android:src="@drawable/squirtle"
                     android:onClick="showDetail"/>
                 <ImageButton
@@ -67,8 +62,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:scaleType="fitCenter"
-                    android:id="@+id/bulbasaur"
-                    android:tag="infernape"
+                    android:tag="bulbasaur"
                     android:src="@drawable/bulbasaur"
                     android:onClick="showDetail"/>
             </TableRow>
