@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 public class Pokedex extends AppCompatActivity {
 
@@ -18,10 +19,19 @@ public class Pokedex extends AppCompatActivity {
         setContentView(R.layout.activity_pokedex);
     }
 
+
     public void showDetail(View view) {
+        if (getResources().getConfiguration().orientation
+                == Configuration.ORIENTATION_PORTRAIT) {
             Intent intent = new Intent(this, DetailActivity.class);
             intent.putExtra("pokemon_name", view.getTag().toString());
             startActivity(intent);
+        } else {
+            // Update the Fragment.
+            DetailFragment details = (DetailFragment)getFragmentManager().findFragmentById(R.id.pokemon_fragment);
+            details.setValue(view.getTag().toString());
+        }
+
     }
 
     @Override
@@ -33,6 +43,7 @@ public class Pokedex extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        Toast.makeText(this, item.getTitle(), Toast.LENGTH_LONG).show();
         return super.onOptionsItemSelected(item);
     }
 }
