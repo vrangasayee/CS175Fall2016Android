@@ -36,6 +36,11 @@ public class CustomDictionaryAdapter extends ArrayAdapter<String> {
     }
 
     @Override
+    public String getItem(int position) {
+        return words.get(position);
+    }
+
+    @Override
     public View getView(int position, View row, ViewGroup parent) {
         LayoutInflater inflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
