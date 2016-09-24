@@ -2,8 +2,11 @@ package edu.sjsu.fall2016.cs175.dictionary;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -25,10 +28,16 @@ public class VocabQuiz extends AppCompatActivity {
         ArrayList<String> word_list = new ArrayList<>(dictionary.keySet());
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                 this,
-                android.R.layout.simple_list_item_1,
+                android.R.layout.simple_list_item_checked,
                 word_list);
-        ListView listView = (ListView) findViewById(R.id.word_meaning);
+        final ListView listView = (ListView) findViewById(R.id.word_meaning);
         listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(VocabQuiz.this, parent.getAdapter().getItem(position).toString(), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     private void readAll() {
@@ -38,6 +47,10 @@ public class VocabQuiz extends AppCompatActivity {
             String[] pieces = line.split("\t");
             dictionary.put(pieces[0], pieces[1]);
         }
+    }
+
+    public void listClick(View view) {
+        Toast.makeText(this, "Clicked", Toast.LENGTH_SHORT);
     }
 }
 
