@@ -29,4 +29,10 @@ dependencies {
 
     // Ion for URL loading
     compile 'com.koushikdutta.ion:ion:2.+'
+
+    // Use GSON and retrofit
+    compile 'com.google.code.gson:gson:2.6.2'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
 }
+

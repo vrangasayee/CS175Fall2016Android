@@ -9,14 +9,20 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
-    tools:context="edu.sjsu.fall2016.cs175.catsandjokes.MainActivity">
+    tools:context="edu.sjsu.fall2016.cs175.catsandjokes.ui.MainActivity">
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Get me a joke"
+        android:text="Joke Ion"
         android:id="@+id/jokeClick"
         android:onClick="jokeClicked"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Joke Retrofit"
+        android:id="@+id/jokeClick2"
+        android:onClick="jokeClickedRetrofit"/>
 
     <TextView
         android:layout_width="match_parent"
